@@ -3,23 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors Game By TechWithTwin</title>
+    <title>Tip Calculator By TechWithTwin</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <form class="card">
+    <form id="calc-form" class="card">
       <div>
         <h1>JavaScript Tip Calculator</h1>
         <p>Enter the bill amount and tip percentage to calculate the total.</p>
       </div>
 
       <div class="field">
-        <label for="amount">Bill Amount</label>
-        <input id="amount" placeholder="e.g 100" />
+        <label for="amount">Bill Amount in $</label>
+        <input
+          required
+          name="amount"
+          id="amount"
+          placeholder="e.g 100"
+          type="number"
+          min="0"
+        />
       </div>
       <div class="field">
-        <label for="amount">Tip Percentage</label>
-        <input id="amount" placeholder="e.g 100" />
+        <label for="percentage">Tip Percentage</label>
+        <input
+          required
+          name="percentage"
+          id="percentage"
+          type="number"
+          min="1"
+          max="100"
+          placeholder="e.g 10"
+        />
       </div>
       <button type="submit">Calculate</button>
       <p class="summary">Total: $120</p>
